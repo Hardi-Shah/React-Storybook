@@ -1,23 +1,21 @@
-import React from 'react'                                              
+import React,{useState} from 'react'                                              
 import './Input.css'
 
-function Input(props) {
-    const { size = 'medium', ...rest }=props
-    return (
-        <input className={`input ${size}`}{...rest}/>
+export interface InputProps{
+    size?:'small'|'medium'|'large';
+    backgroundColor?:string;
+    placeholder?:string;
+    title?:string;
+}
+export const Input:React.FC<InputProps>=({
+    size='medium',
+    backgroundColor,
+    placeholder,
+    title,
+    ...rest
+})=>{
+    return(
+        <input className={`input ${size}`}{...rest} value={title} placeholder={placeholder} style={{backgroundColor}}/>
     )
 }
 export default Input
-
-// import React, { FC } from 'react'
-// interface TagProps {
-//      title?: string;
-// }
-// const Tag: FC<TagProps> = ({ title="My title" }) => {
-//      return (
-//          <div style={{backgroundColor: 'yellow'}}>
-//              {title}
-//          </div>
-//      )
-// }
-// export default Tag

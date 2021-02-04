@@ -49,17 +49,18 @@ import './Button.css';
 
 export interface ButtonProps {
     variant?: 'primary' | 'secondary' | 'success'| 'danger';
-    children: string;
+    children?: string;
+    backgroundColor?: string;
 }
 export const Button: React.FC<ButtonProps> = ({
     variant = 'primary',
     children,
-    ...props
+    backgroundColor,
+    ...rest
   }) => {
  return(
-    <button className={`button ${variant}`} {...props}>
+    <button className={`button ${variant}`} {...rest} style={{backgroundColor}}>
         {children}
-
     </button>
 )
  }
