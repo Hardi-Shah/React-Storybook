@@ -15,7 +15,7 @@ export const Input:React.FC<InputProps>=({
     ...rest
 })=>{
     return(
-        <input className={`input ${size}`}{...rest} value={title} placeholder={placeholder} style={{backgroundColor}}/>
+        <input className={`input ${size}`}{...rest} defaultValue={title} placeholder={placeholder} style={{backgroundColor}}/>
     )
 }
 export default Input

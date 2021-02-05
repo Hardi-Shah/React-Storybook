@@ -59,7 +59,7 @@ export const Button: React.FC<ButtonProps> = ({
     ...rest
   }) => {
  return(
-    <button className={`button ${variant}`} {...rest} style={{backgroundColor}}>
+    <button className={`button ${variant}`} {...rest}  style={{backgroundColor}}>
         {children}
     </button>
 )
