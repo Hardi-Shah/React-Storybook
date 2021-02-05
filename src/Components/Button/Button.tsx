@@ -51,6 +51,7 @@ export interface ButtonProps {
     variant?: 'primary' | 'secondary' | 'success'| 'danger';
     children?: string;
     backgroundColor?: string;
+    onClick?: () => void;
 }
 export const Button: React.FC<ButtonProps> = ({
     variant = 'primary',
